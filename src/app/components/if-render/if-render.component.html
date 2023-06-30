@@ -1,0 +1,8 @@
+<div *ngIf="canShow">Estamos mostrando pq foi permitido</div>
+
+<button (click)="switch()">esta {{ canShow }}</button>
+
+<h3 *ngIf="name === 'Edson'; else nameNotFound">O nome é Edson</h3>
+<ng-template #nameNotFound>
+  <h2>Nome não foi encontrado</h2>
+</ng-template>

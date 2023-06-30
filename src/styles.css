@@ -2,3 +2,7 @@
 a {
   color: blueviolet;
 }
+
+body {
+  padding-bottom: 500px;
+}
