@@ -1,0 +1,23 @@
+<h2>Two way data binding</h2>
+
+<form>
+  <input
+    type="text"
+    [(ngModel)]="animal.name"
+    name="name"
+    placeholder="Digite o nome do animal"
+  />
+  <input
+    type="text"
+    [(ngModel)]="animal.type"
+    name="type"
+    placeholder="Digite o tipo do animal"
+  />
+  <input
+    type="number"
+    [(ngModel)]="animal.age"
+    name="age"
+    placeholder="Digite o idade do animal"
+  />
+  <input type="submit" value="Enviar" (click)="registrar()" />
+</form>
