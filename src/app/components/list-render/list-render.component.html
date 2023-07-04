@@ -3,6 +3,29 @@
   <li *ngFor="let animal of animals">
     Nome: {{ animal.name }} --- Tipo: {{ animal.type }}
     <button (click)="showAge(animal)">Show Age</button>
+    <button (click)="removeAnimal(animal)">Delete</button>
   </li>
   <p *ngIf="animalDetails.length != 0">{{ animalDetails }}</p>
 </ul>
+
+<form>
+  <input
+    type="text"
+    [(ngModel)]="newAnimal.name"
+    name="name"
+    placeholder="Digite o nome do animal"
+  />
+  <input
+    type="text"
+    [(ngModel)]="newAnimal.type"
+    name="type"
+    placeholder="Digite o tipo do animal"
+  />
+  <input
+    type="number"
+    [(ngModel)]="newAnimal.age"
+    name="age"
+    placeholder="Digite o idade do animal"
+  />
+  <input type="submit" value="Cadastrar" (click)="registrar()" />
+</form>
