@@ -1,34 +1,10 @@
+<p>header</p>
+
 <h1>Hello World!</h1>
-<hr />
+<nav>
+  <a routerLink="/">HOME</a>
+  <a routerLink="/list">LIST</a>
+</nav>
+<router-outlet></router-outlet>
 
-<div>
-  <a href="#">First link</a>
-</div>
-<hr />
-
-<app-first-component></app-first-component>
-<hr />
-
-<app-parent-data [name]="username" [userData]="userData"></app-parent-data>
-<hr />
-
-<app-directives></app-directives>
-<hr />
-
-<app-if-render></app-if-render>
-<hr />
-
-<app-events></app-events>
-<hr />
-
-<app-emitter></app-emitter>
-<hr />
-
-<app-list-render></app-list-render>
-<hr />
-
-<app-pipes></app-pipes>
-<hr />
-
-<app-two-way-binding></app-two-way-binding>
-<hr />
+<p>footer</p>
