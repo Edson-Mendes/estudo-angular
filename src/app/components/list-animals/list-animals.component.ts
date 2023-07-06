@@ -20,8 +20,14 @@ export class ListAnimalsComponent {
     this.listService.getAll().subscribe((animals) => (this.animals = animals));
   }
 
-  removeAnimal(animal: Animal) {
-    throw new Error('Method not implemented.');
+  deleteAnimal(id: number) {
+    console.log('deleting animal...');
+    this.listService.removeById(id).subscribe();
+    let index: number = this.animals.findIndex((animal) => animal.id === id);
+
+    if (index !== -1) {
+      this.animals.splice(index, 1);
+    }
   }
 
   showAge(animal: Animal) {

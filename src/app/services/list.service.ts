@@ -32,4 +32,8 @@ export class ListService {
   getAnimalById(id: number): Observable<Animal> {
     return this.http.get<Animal>(`${this.apiUrl}/${id}`);
   }
+
+  removeById(id: number) {
+    return this.http.delete<Animal>(`${this.apiUrl}/${id}`);
+  }
 }

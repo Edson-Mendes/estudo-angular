@@ -5,7 +5,7 @@
     Nome: <a routerLink="/animals/{{ animal.id }}">{{ animal.name }}</a> ---
     Tipo: {{ animal.type }}
     <button (click)="showAge(animal)">Show Age</button>
-    <button (click)="removeAnimal(animal)">Delete</button>
+    <button (click)="deleteAnimal(animal.id)">Delete</button>
   </li>
   <p *ngIf="animalDetails.length != 0">{{ animalDetails }}</p>
 </ul>
