@@ -12,16 +12,16 @@ export class ListRenderComponent {
     this.listService = listService;
   }
 
-  newAnimal: Animal = { name: '', type: '', age: 0 };
+  newAnimal: Animal = { id: 1, name: '', type: '', age: 0 };
 
   animals: Animal[] = [
-    { name: 'Kira', type: 'Cat', age: 6 },
-    { name: 'Mei', type: 'Cat', age: 6 },
-    { name: 'Feijão', type: 'Cat', age: 8 },
-    { name: 'Sofi', type: 'Dog', age: 12 },
-    { name: 'Mila', type: 'Cat', age: 9 },
-    { name: 'Luna', type: 'Cat', age: 9 },
-    { name: 'Princesa', type: 'Horse', age: 4 },
+    { id: 10, name: 'Kira', type: 'Cat', age: 6 },
+    { id: 10, name: 'Mei', type: 'Cat', age: 6 },
+    { id: 10, name: 'Feijão', type: 'Cat', age: 8 },
+    { id: 10, name: 'Sofi', type: 'Dog', age: 12 },
+    { id: 10, name: 'Mila', type: 'Cat', age: 9 },
+    { id: 10, name: 'Luna', type: 'Cat', age: 9 },
+    { id: 10, name: 'Princesa', type: 'Horse', age: 4 },
   ];
 
   animalDetails: string = '';
@@ -40,6 +40,6 @@ export class ListRenderComponent {
   }
 
   private reset(): void {
-    this.newAnimal = { name: '', type: '', age: 0 };
+    this.newAnimal = { id: 0, name: '', type: '', age: 0 };
   }
 }
